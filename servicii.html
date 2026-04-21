@@ -7,93 +7,51 @@
   <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
-  <div class="topbar">
-    <div class="container">
-      <p>Consultanță audio: <strong>+40 770 564 417</strong></p>
-      <p>Livrare rapidă | Instalare profesională | Support B2B</p>
-    </div>
-  </div>
-
-  <header class="site-header">
-    <div class="container header-main">
-      <a class="logo" href="index.html">AudioHub</a>
-      <form class="search" action="#" method="get">
-        <input type="search" placeholder="Caută boxe, căști, amplificatoare..." />
-        <button type="submit">Caută</button>
-      </form>
-      <div class="header-actions">
-        <a href="#">Contul meu</a>
-        <a href="#">Favorite</a>
-        <a href="#" class="js-cart-count">Coș (0)</a>
-      </div>
-    </div>
-    <nav class="main-nav">
-      <div class="container">
-        <a href="categorii.html">Categorii</a>
-        <a href="promotii.html">Promoții</a>
-        <a href="produse.html">Produse audio</a>
-        <a href="branduri.html">Branduri</a>
-        <a href="servicii.html">Servicii</a>
-        <a href="contact.html">Contact</a>
-      </div>
-    </nav>
-  </header>
+  <div class="topbar"><div class="container"><p>Consultanță audio: <strong>+40 770 564 417</strong></p><p>Livrare rapidă | Instalare profesională | Support B2B</p></div></div>
+  <header class="site-header"><div class="container header-main"><a class="logo" href="index.html">AudioHub</a><form class="search" action="#" method="get"><input type="search" placeholder="Caută boxe, căști, amplificatoare..." /><button type="submit">Caută</button></form><div class="header-actions"><a href="#">Contul meu</a><a href="#">Favorite</a><a href="cos.html" class="js-cart-count">Coș (0)</a></div></div><nav class="main-nav"><div class="container"><a href="categorii.html">Categorii</a><a href="promotii.html">Promoții</a><a href="produse.html">Produse audio</a><a href="branduri.html">Branduri</a><a href="servicii.html">Servicii</a><a href="contact.html">Contact</a></div></nav></header>
 
   <main class="container">
     <section class="section services page-section">
-      <h1>Servicii AudioHub</h1>
+      <div class="section-head"><h1>Servicii AudioHub</h1><a class="js-clear-filter" href="servicii.html">Șterge filtrul</a></div>
+      <p class="filter-info js-filter-title"></p>
       <div class="service-grid">
-        <article>
+        <article class="js-filter-card" data-category="casti">
+          <img src="https://images.pexels.com/photos/6039245/pexels-photo-6039245.jpeg?auto=compress&cs=tinysrgb&w=1200" alt="Consultanță pentru alegerea căștilor" />
           <h3>Consultanță pre-achiziție</h3>
           <p>Îți propunem configurații potrivite bugetului și spațiului.</p>
           <p class="service-price">250 lei / sesiune</p>
           <button class="btn-cart js-add-to-cart" data-type="serviciu" data-name="Consultanță pre-achiziție" data-price="250">Adaugă în coș</button>
         </article>
 
-        <article>
+        <article class="js-filter-card" data-category="boxe">
+          <img src="https://images.pexels.com/photos/8471984/pexels-photo-8471984.jpeg?auto=compress&cs=tinysrgb&w=1200" alt="Instalare sistem de boxe la locație" />
           <h3>Instalare la locație</h3>
           <p>Montaj profesionist pentru locuințe, birouri și spații comerciale.</p>
           <p class="service-price">450 lei / intervenție</p>
           <button class="btn-cart js-add-to-cart" data-type="serviciu" data-name="Instalare la locație" data-price="450">Adaugă în coș</button>
         </article>
 
-        <article>
+        <article class="js-filter-card" data-category="home-cinema">
+          <img src="https://images.pexels.com/photos/777001/pexels-photo-777001.jpeg?auto=compress&cs=tinysrgb&w=1200" alt="Calibrare acustică pentru home cinema" />
           <h3>Calibrare acustică</h3>
           <p>Reglaj fin pentru claritate și separație corectă a frecvențelor.</p>
           <p class="service-price">350 lei / pachet</p>
           <button class="btn-cart js-add-to-cart" data-type="serviciu" data-name="Calibrare acustică" data-price="350">Adaugă în coș</button>
         </article>
 
-        <article>
+        <article class="js-filter-card" data-category="amplificatoare">
+          <img src="https://images.pexels.com/photos/257904/pexels-photo-257904.jpeg?auto=compress&cs=tinysrgb&w=1200" alt="Mentenanță preventivă pentru amplificatoare" />
           <h3>Mentenanță preventivă</h3>
           <p>Verificare conexiuni, actualizare firmware și optimizare sistem.</p>
           <p class="service-price">300 lei / lună</p>
           <button class="btn-cart js-add-to-cart" data-type="serviciu" data-name="Mentenanță preventivă" data-price="300">Adaugă în coș</button>
         </article>
       </div>
-    </section>
-
-    <section class="section cart-panel">
-      <div class="section-head">
-        <h2>Coșul tău</h2>
-      </div>
-      <ul class="cart-items js-cart-items">
-        <li>Coșul este gol momentan.</li>
-      </ul>
-      <p class="cart-total">Total: <strong class="js-cart-total">0 lei</strong></p>
-      <div class="cart-actions">
-        <button class="btn primary js-checkout">Simulează plata</button>
-        <button class="btn js-clear-cart">Golește coșul</button>
-      </div>
-      <p class="payment-status js-payment-status"></p>
+      <p class="filter-empty js-filter-empty" hidden>Nu există servicii pentru filtrul selectat.</p>
     </section>
   </main>
 
-  <footer>
-    <div class="container footer-content">
-      <p>© 2026 AudioHub. Toate drepturile rezervate.</p>
-    </div>
-  </footer>
+  <footer><div class="container footer-content"><p>© 2026 AudioHub. Toate drepturile rezervate.</p></div></footer>
 
   <script src="app.js"></script>
 </body>

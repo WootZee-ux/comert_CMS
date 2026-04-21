@@ -86,6 +86,49 @@
     renderCart();
   };
 
+  const prettyName = (value) =>
+    value
+      .replaceAll('-', ' ')
+      .replace(/\b\w/g, (char) => char.toUpperCase());
+
+  const applyFilters = () => {
+    const cards = Array.from(document.querySelectorAll('.js-filter-card'));
+    if (cards.length === 0) return;
+
+    const params = new URLSearchParams(window.location.search);
+    const category = (params.get('category') || '').trim().toLowerCase();
+    const brand = (params.get('brand') || '').trim().toLowerCase();
+    const titleNode = document.querySelector('.js-filter-title');
+    const emptyNode = document.querySelector('.js-filter-empty');
+
+    let visible = 0;
+
+    cards.forEach((card) => {
+      const categoryMatch = !category || card.dataset.category === category;
+      const brandMatch = !brand || card.dataset.brand === brand;
+      const isVisible = categoryMatch && brandMatch;
+
+      card.hidden = !isVisible;
+      if (isVisible) visible += 1;
+    });
+
+    if (titleNode) {
+      if (category && brand) {
+        titleNode.textContent = `Filtru activ: categoria "${prettyName(category)}" și brandul "${prettyName(brand)}".`;
+      } else if (category) {
+        titleNode.textContent = `Filtru activ: categoria "${prettyName(category)}".`;
+      } else if (brand) {
+        titleNode.textContent = `Filtru activ: brandul "${prettyName(brand)}".`;
+      } else {
+        titleNode.textContent = 'Alege o categorie sau un brand pentru listă filtrată.';
+      }
+    }
+
+    if (emptyNode) {
+      emptyNode.hidden = visible > 0;
+    }
+  };
+
   document.querySelectorAll('.js-add-to-cart').forEach((button) => {
     button.addEventListener('click', () => addToCart(button));
   });
@@ -115,5 +158,6 @@
     });
   }
 
+  applyFilters();
   renderCart();
 })();
