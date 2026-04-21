@@ -376,3 +376,21 @@ footer {
     gap: 0.2rem;
   }
 }
+
+.page-section {
+  margin-top: 1.2rem;
+}
+
+.page-section h1 {
+  margin-top: 0;
+}
+
+.standalone-offers {
+  max-width: 520px;
+}
+
+.hero-offers a {
+  color: var(--primary);
+  text-decoration: none;
+  font-weight: 700;
+}

@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>AudioHub - Structură tip magazin AV</title>
+    <title>AudioHub - Acasă</title>
     <link rel="stylesheet" href="styles.css" />
   </head>
   <body>
@@ -16,7 +16,7 @@
 
     <header class="site-header">
       <div class="container header-main">
-        <a class="logo" href="#">AudioHub</a>
+        <a class="logo" href="index.html">AudioHub</a>
         <form class="search" action="#" method="get">
           <input type="search" placeholder="Caută boxe, căști, amplificatoare..." />
           <button type="submit">Caută</button>
@@ -30,12 +30,12 @@
 
       <nav class="main-nav">
         <div class="container">
-          <a href="#categorii">Categorii</a>
-          <a href="#promotii">Promoții</a>
-          <a href="#produse">Produse populare</a>
-          <a href="#branduri">Branduri</a>
-          <a href="#servicii">Servicii</a>
-          <a href="#contact">Contact</a>
+          <a href="categorii.html">Categorii</a>
+          <a href="promotii.html">Promoții</a>
+          <a href="produse.html">Produse populare</a>
+          <a href="branduri.html">Branduri</a>
+          <a href="servicii.html">Servicii</a>
+          <a href="contact.html">Contact</a>
         </div>
       </nav>
     </header>
@@ -43,130 +43,32 @@
     <main class="container">
       <section class="hero">
         <article class="hero-highlight">
-          <p class="badge">Structură clară, tip e-commerce</p>
-          <h1>Magazin audio organizat pe categorii, promoții și produse recomandate</h1>
+          <p class="badge">Paginile sunt separate (fără scroll în aceeași pagină)</p>
+          <h1>AudioHub are acum navigare pe pagini distincte</h1>
           <p>
-            Acum pagina are ierarhie logică: meniu principal, categorii rapide,
-            produse populare, secțiune de branduri și servicii, exact cum te aștepți
-            de la un magazin audio modern.
+            Fiecare secțiune principală are pagina ei: Categorii, Promoții, Produse,
+            Branduri, Servicii și Contact. Când dai click, se deschide pagina dedicată,
+            nu te mai mută în aceeași pagină prin ancore.
           </p>
           <div class="hero-buttons">
-            <a class="btn primary" href="#categorii">Vezi categorii</a>
-            <a class="btn" href="#produse">Vezi produse</a>
+            <a class="btn primary" href="categorii.html">Vezi categorii</a>
+            <a class="btn" href="produse.html">Vezi produse</a>
           </div>
         </article>
 
-        <aside class="hero-offers" id="promotii">
-          <h2>Promoții rapide</h2>
+        <aside class="hero-offers">
+          <h2>Acces rapid</h2>
           <ul>
-            <li><span>Soundbar-uri</span><strong>-18%</strong></li>
-            <li><span>Căști ANC</span><strong>-12%</strong></li>
-            <li><span>Boxe portabile</span><strong>-22%</strong></li>
-            <li><span>Pachete Home Cinema</span><strong>-15%</strong></li>
+            <li><span>Promoții curente</span><a href="promotii.html">Intră</a></li>
+            <li><span>Branduri disponibile</span><a href="branduri.html">Intră</a></li>
+            <li><span>Servicii AudioHub</span><a href="servicii.html">Intră</a></li>
+            <li><span>Date de contact</span><a href="contact.html">Intră</a></li>
           </ul>
         </aside>
       </section>
-
-      <section class="section" id="categorii">
-        <div class="section-head">
-          <h2>Categorii principale</h2>
-          <a href="#">Vezi tot catalogul</a>
-        </div>
-        <div class="category-grid">
-          <article class="tile">
-            <h3>Boxe active & pasive</h3>
-            <p>Pentru living, terasă, retail sau săli de evenimente.</p>
-          </article>
-          <article class="tile">
-            <h3>Căști</h3>
-            <p>Wireless, studio, gaming, DJ și modele Hi-Fi.</p>
-          </article>
-          <article class="tile">
-            <h3>Amplificatoare</h3>
-            <p>Stereo, multiroom și AV receivers pentru home cinema.</p>
-          </article>
-          <article class="tile">
-            <h3>Home Cinema</h3>
-            <p>Soundbar, subwoofer, surround și pachete complete.</p>
-          </article>
-          <article class="tile">
-            <h3>Studio & Podcast</h3>
-            <p>Monitoare, microfoane, interfețe și accesorii.</p>
-          </article>
-          <article class="tile">
-            <h3>Cabluri & Accesorii</h3>
-            <p>Conectică, standuri, suporturi și tratament acustic.</p>
-          </article>
-        </div>
-      </section>
-
-      <section class="section" id="produse">
-        <div class="section-head">
-          <h2>Produse populare</h2>
-          <a href="#">Vezi toate produsele</a>
-        </div>
-        <div class="product-grid">
-          <article class="product-card">
-            <img src="https://images.pexels.com/photos/164938/pexels-photo-164938.jpeg?auto=compress&cs=tinysrgb&w=1200" alt="Boxă portabilă" />
-            <p class="product-category">Boxe portabile</p>
-            <h3>Pulse Party 300</h3>
-            <p>Baterie 14h, Bluetooth 5.3, certificare IPX7.</p>
-            <div class="price-row"><strong>1.299 lei</strong><a href="#">Detalii</a></div>
-          </article>
-
-          <article class="product-card">
-            <img src="https://images.pexels.com/photos/3394658/pexels-photo-3394658.jpeg?auto=compress&cs=tinysrgb&w=1200" alt="Căști over-ear" />
-            <p class="product-category">Căști ANC</p>
-            <h3>Silence Pro Max</h3>
-            <p>Anulare activă zgomot, autonomie 40h, USB-C.</p>
-            <div class="price-row"><strong>799 lei</strong><a href="#">Detalii</a></div>
-          </article>
-
-          <article class="product-card">
-            <img src="https://images.pexels.com/photos/6782474/pexels-photo-6782474.jpeg?auto=compress&cs=tinysrgb&w=1200" alt="Soundbar" />
-            <p class="product-category">Home Cinema</p>
-            <h3>Cinema Bar S80</h3>
-            <p>Dolby Atmos, subwoofer wireless, HDMI eARC.</p>
-            <div class="price-row"><strong>1.999 lei</strong><a href="#">Detalii</a></div>
-          </article>
-
-          <article class="product-card">
-            <img src="https://images.pexels.com/photos/1038916/pexels-photo-1038916.jpeg?auto=compress&cs=tinysrgb&w=1200" alt="Sistem surround" />
-            <p class="product-category">Pachet complet</p>
-            <h3>Surround 5.1 Elite</h3>
-            <p>Sistem complet pentru camere medii și mari.</p>
-            <div class="price-row"><strong>3.490 lei</strong><a href="#">Detalii</a></div>
-          </article>
-        </div>
-      </section>
-
-      <section class="section brands" id="branduri">
-        <h2>Branduri căutate</h2>
-        <div class="brand-list">
-          <span>Yamaha</span><span>Sony</span><span>JBL</span><span>Klipsch</span><span>Sennheiser</span><span>Denon</span>
-        </div>
-      </section>
-
-      <section class="section services" id="servicii">
-        <h2>Servicii AudioHub</h2>
-        <div class="service-grid">
-          <article>
-            <h3>Consultanță pre-achiziție</h3>
-            <p>Îți propunem configurații potrivite bugetului și spațiului.</p>
-          </article>
-          <article>
-            <h3>Instalare la locație</h3>
-            <p>Montaj profesionist pentru locuințe, birouri și spații comerciale.</p>
-          </article>
-          <article>
-            <h3>Calibrare acustică</h3>
-            <p>Reglaj fin pentru claritate și separație corectă a frecvențelor.</p>
-          </article>
-        </div>
-      </section>
     </main>
 
-    <footer id="contact">
+    <footer>
       <div class="container footer-content">
         <div>
           <h4>AudioHub</h4>
