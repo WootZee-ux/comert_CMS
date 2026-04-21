@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>AudioHub - Produse și servicii audio</title>
+    <title>AudioHub - Magazin și servicii audio</title>
     <link rel="stylesheet" href="styles.css" />
   </head>
   <body>
@@ -11,73 +11,137 @@
       <nav class="navbar">
         <div class="logo">AudioHub</div>
         <ul>
+          <li><a href="#structura">Structură</a></li>
+          <li><a href="#categorii">Categorii</a></li>
           <li><a href="#produse">Produse</a></li>
           <li><a href="#servicii">Servicii</a></li>
-          <li><a href="#despre">Despre noi</a></li>
           <li><a href="#contact">Contact</a></li>
         </ul>
       </nav>
       <div class="hero-content">
-        <h1>Sunet premium pentru fiecare spațiu</h1>
+        <h1>Magazin audio clar structurat</h1>
         <p>
-          Descoperă boxe, căști, sisteme home cinema și soluții audio profesionale,
-          plus servicii complete de consultanță și instalare.
+          Acum găsești rapid ce ai nevoie: categorii de produse, colecții complete,
+          servicii profesionale și contact direct pentru ofertă.
         </p>
-        <a class="cta" href="#produse">Vezi produsele</a>
+        <div class="hero-actions">
+          <a class="cta" href="#produse">Vezi toate produsele</a>
+          <a class="cta secondary" href="#servicii">Vezi serviciile</a>
+        </div>
       </div>
     </header>
 
     <main>
-      <section id="produse" class="section">
-        <h2>Produse audio populare</h2>
+      <section id="structura" class="section">
+        <h2>Cum este organizat site-ul</h2>
+        <div class="grid layout-grid">
+          <article class="card">
+            <h3>1) Categorii</h3>
+            <p>Începi din categoriile principale: Boxe, Căști, Home Cinema și Studio.</p>
+          </article>
+          <article class="card">
+            <h3>2) Produse</h3>
+            <p>Fiecare categorie are produse afișate clar, cu preț orientativ și utilizare.</p>
+          </article>
+          <article class="card">
+            <h3>3) Servicii</h3>
+            <p>Poți adăuga instalare, calibrare și mentenanță direct după alegerea produsului.</p>
+          </article>
+        </div>
+      </section>
+
+      <section id="categorii" class="section alt">
+        <h2>Categorii produse</h2>
         <div class="grid">
+          <article class="card category-card">
+            <h3>Boxe & portabile</h3>
+            <p>Boxe Bluetooth, party speakers și sisteme compacte pentru casă.</p>
+            <a href="#cat-boxe">Vezi produse</a>
+          </article>
+          <article class="card category-card">
+            <h3>Căști</h3>
+            <p>Modele over-ear, in-ear și wireless ANC pentru lucru sau călătorii.</p>
+            <a href="#cat-casti">Vezi produse</a>
+          </article>
+          <article class="card category-card">
+            <h3>Home cinema</h3>
+            <p>Soundbar-uri și sisteme surround pentru filme, sport și gaming.</p>
+            <a href="#cat-cinema">Vezi produse</a>
+          </article>
+          <article class="card category-card">
+            <h3>Studio & podcast</h3>
+            <p>Monitoare de studio, microfoane și interfețe pentru producție audio.</p>
+            <a href="#cat-studio">Vezi produse</a>
+          </article>
+        </div>
+      </section>
+
+      <section id="produse" class="section">
+        <h2>Produse disponibile</h2>
+
+        <h3 id="cat-boxe" class="group-title">Boxe & portabile</h3>
+        <div class="grid product-grid">
           <article class="card">
-            <img
-              src="https://images.unsplash.com/photo-1589003077984-894e133dabab?auto=format&fit=crop&w=1200&q=80"
-              alt="Boxă portabilă Bluetooth"
-            />
-            <h3>Boxe Bluetooth</h3>
-            <p>Portabile, rezistente la apă și cu bass puternic pentru orice ieșire.</p>
+            <img src="https://images.pexels.com/photos/63703/pexels-photo-63703.jpeg?auto=compress&cs=tinysrgb&w=1200" alt="Boxă portabilă bluetooth neagră" />
+            <h4>Pulse Go 20W</h4>
+            <p>Boxă portabilă, IPX7, autonomie 12h.</p>
+            <strong>349 lei</strong>
           </article>
           <article class="card">
-            <img
-              src="https://images.unsplash.com/photo-1505740420928-5e560c06d30e?auto=format&fit=crop&w=1200&q=80"
-              alt="Căști over-ear negre"
-            />
-            <h3>Căști over-ear</h3>
-            <p>Confort extins, izolare pasivă excelentă și sunet echilibrat.</p>
+            <img src="https://images.pexels.com/photos/3394665/pexels-photo-3394665.jpeg?auto=compress&cs=tinysrgb&w=1200" alt="Sistem audio de raft cu două boxe" />
+            <h4>RoomBeat Stereo</h4>
+            <p>Sistem 2.0 pentru living sau birou.</p>
+            <strong>799 lei</strong>
           </article>
           <article class="card">
-            <img
-              src="https://images.unsplash.com/photo-1546435770-a3e426bf472b?auto=format&fit=crop&w=1200&q=80"
-              alt="Căști wireless cu anulare a zgomotului"
-            />
-            <h3>Căști wireless ANC</h3>
-            <p>Anulare activă a zgomotului și autonomie mare pentru birou sau călătorii.</p>
+            <img src="https://images.pexels.com/photos/164938/pexels-photo-164938.jpeg?auto=compress&cs=tinysrgb&w=1200" alt="Boxă mare pentru petreceri" />
+            <h4>Party Blast 300</h4>
+            <p>Putere ridicată, efecte luminoase, microfon inclus.</p>
+            <strong>1.299 lei</strong>
+          </article>
+        </div>
+
+        <h3 id="cat-casti" class="group-title">Căști</h3>
+        <div class="grid product-grid">
+          <article class="card">
+            <img src="https://images.pexels.com/photos/3394658/pexels-photo-3394658.jpeg?auto=compress&cs=tinysrgb&w=1200" alt="Căști over-ear pe o suprafață din lemn" />
+            <h4>Silence ANC Pro</h4>
+            <p>Wireless, anulare activă a zgomotului, autonomie 40h.</p>
+            <strong>699 lei</strong>
           </article>
           <article class="card">
-            <img
-              src="https://images.unsplash.com/photo-1571415060716-baff5f717c37?auto=format&fit=crop&w=1200&q=80"
-              alt="Soundbar într-un living modern"
-            />
-            <h3>Soundbar & Home Cinema</h3>
-            <p>Soluții pentru filme și gaming cu experiență audio captivantă.</p>
+            <img src="https://images.pexels.com/photos/3780681/pexels-photo-3780681.jpeg?auto=compress&cs=tinysrgb&w=1200" alt="Căști true wireless într-o cutie de încărcare" />
+            <h4>AirTune Mini</h4>
+            <p>Căști in-ear true wireless pentru apeluri și muzică.</p>
+            <strong>299 lei</strong>
           </article>
           <article class="card">
-            <img
-              src="https://images.unsplash.com/photo-1516280440614-37939bbacd81?auto=format&fit=crop&w=1200&q=80"
-              alt="Monitoare audio de studio"
-            />
-            <h3>Monitoare de studio</h3>
-            <p>Redare precisă pentru producție muzicală, podcast și mix/master.</p>
+            <img src="https://images.pexels.com/photos/577769/pexels-photo-577769.jpeg?auto=compress&cs=tinysrgb&w=1200" alt="Căști pentru gaming cu microfon" />
+            <h4>GameVoice X</h4>
+            <p>Sunet 7.1 virtual și microfon cu reducere de zgomot.</p>
+            <strong>459 lei</strong>
+          </article>
+        </div>
+
+        <h3 id="cat-cinema" class="group-title">Home cinema</h3>
+        <div class="grid product-grid">
+          <article class="card">
+            <img src="https://images.pexels.com/photos/6782474/pexels-photo-6782474.jpeg?auto=compress&cs=tinysrgb&w=1200" alt="Soundbar plasat sub televizor" />
+            <h4>Cinema Bar S60</h4>
+            <p>Soundbar 3.1 cu subwoofer wireless.</p>
+            <strong>1.499 lei</strong>
           </article>
           <article class="card">
-            <img
-              src="https://images.unsplash.com/photo-1590602847861-f357a9332bbc?auto=format&fit=crop&w=1200&q=80"
-              alt="Microfon pentru podcast și streaming"
-            />
-            <h3>Microfoane</h3>
-            <p>Modele dinamice și condenser pentru voce, streaming și înregistrări.</p>
+            <img src="https://images.pexels.com/photos/1038916/pexels-photo-1038916.jpeg?auto=compress&cs=tinysrgb&w=1200" alt="Sistem home cinema într-un living modern" />
+            <h4>Surround 5.1 Pack</h4>
+            <p>Set complet pentru experiență cinematică acasă.</p>
+            <strong>2.990 lei</strong>
+          </article>
+          <article class="card">
+            <img src="https://images.pexels.com/photos/827518/pexels-photo-827518.jpeg?auto=compress&cs=tinysrgb&w=1200" alt="Televizor și sistem audio în cameră întunecată" />
+            <h4>Movie Night Kit</h4>
+            <p>Pachet recomandat pentru apartamente și camere medii.</p>
+            <strong>2.199 lei</strong>
           </article>
         </div>
       </section>
@@ -87,7 +151,7 @@
         <div class="service-grid">
           <article class="card">
             <img
-              src="https://images.unsplash.com/photo-1558403194-611308249627?auto=format&fit=crop&w=1200&q=80"
+              src="https://images.pexels.com/photos/5668473/pexels-photo-5668473.jpeg?auto=compress&cs=tinysrgb&w=1200"
               alt="Specialist oferind consultanță audio"
             />
             <h3>Consultanță personalizată</h3>
@@ -95,7 +159,7 @@
           </article>
           <article class="card">
             <img
-              src="https://images.unsplash.com/photo-1581092160607-ee22731e0a6d?auto=format&fit=crop&w=1200&q=80"
+              src="https://images.pexels.com/photos/257736/pexels-photo-257736.jpeg?auto=compress&cs=tinysrgb&w=1200"
               alt="Tehnician care instalează echipamente audio"
             />
             <h3>Instalare profesională</h3>
@@ -103,7 +167,7 @@
           </article>
           <article class="card">
             <img
-              src="https://images.unsplash.com/photo-1551887373-5ae8b7f4e6b3?auto=format&fit=crop&w=1200&q=80"
+              src="https://images.pexels.com/photos/894695/pexels-photo-894695.jpeg?auto=compress&cs=tinysrgb&w=1200"
               alt="Măsurare acustică într-o cameră"
             />
             <h3>Calibrare acustică</h3>
@@ -111,7 +175,7 @@
           </article>
           <article class="card">
             <img
-              src="https://images.unsplash.com/photo-1519501025264-65ba15a82390?auto=format&fit=crop&w=1200&q=80"
+              src="https://images.pexels.com/photos/7586663/pexels-photo-7586663.jpeg?auto=compress&cs=tinysrgb&w=1200"
               alt="Mentenanță și upgrade pentru sistem audio"
             />
             <h3>Mentenanță & upgrade</h3>
@@ -120,15 +184,7 @@
         </div>
       </section>
 
-      <section id="despre" class="section">
-        <h2>Despre AudioHub</h2>
-        <p>
-          Suntem pasionați de tehnologia audio și oferim atât produse de top,
-          cât și servicii specializate, pentru a obține sunetul perfect în orice mediu.
-        </p>
-      </section>
-
-      <section id="contact" class="section alt">
+      <section id="contact" class="section">
         <h2>Contact</h2>
         <p>Email: daniel.uta@s.utm.ro</p>
         <p>Telefon: +40 770 564 417</p>

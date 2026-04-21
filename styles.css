@@ -11,6 +11,10 @@
   box-sizing: border-box;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   margin: 0;
   font-family: Inter, Arial, sans-serif;
@@ -20,7 +24,7 @@ body {
 }
 
 .hero {
-  min-height: 70vh;
+  min-height: 65vh;
   padding: 1.25rem 2rem 3rem;
   background: radial-gradient(circle at top right, #22376f 0%, #0b1020 65%);
 }
@@ -29,7 +33,7 @@ body {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin-bottom: 4rem;
+  margin-bottom: 3rem;
 }
 
 .logo {
@@ -44,6 +48,7 @@ body {
   gap: 1.2rem;
   margin: 0;
   padding: 0;
+  flex-wrap: wrap;
 }
 
 .navbar a {
@@ -56,7 +61,7 @@ body {
 }
 
 .hero-content {
-  max-width: 700px;
+  max-width: 760px;
 }
 
 .hero-content h1 {
@@ -69,6 +74,12 @@ body {
   margin-bottom: 1.6rem;
 }
 
+.hero-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.7rem;
+}
+
 .cta {
   display: inline-block;
   background: linear-gradient(90deg, var(--primary), var(--accent));
@@ -79,6 +90,11 @@ body {
   border-radius: 10px;
 }
 
+.cta.secondary {
+  background: transparent;
+  border: 1px solid rgba(255, 255, 255, 0.45);
+}
+
 .section {
   padding: 3rem 2rem;
   max-width: 1100px;
@@ -87,6 +103,11 @@ body {
 
 .section h2 {
   margin-top: 0;
+}
+
+.group-title {
+  margin: 2rem 0 0.8rem;
+  color: #dce6ff;
 }
 
 .alt {
@@ -100,6 +121,10 @@ body {
   gap: 1rem;
 }
 
+.layout-grid {
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+}
+
 .card {
   background: var(--panel);
   padding: 1rem;
@@ -109,15 +134,31 @@ body {
 
 .card img {
   width: 100%;
-  height: 160px;
+  height: 170px;
   object-fit: cover;
   border-radius: 10px;
   display: block;
   margin-bottom: 0.8rem;
 }
 
-.card h3 {
+.card h3,
+.card h4 {
   margin-top: 0;
+  margin-bottom: 0.4rem;
+}
+
+.card strong {
+  color: #9cc2ff;
+}
+
+.category-card a {
+  color: #9cc2ff;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.product-grid {
+  margin-bottom: 0.7rem;
 }
 
 .service-grid {
