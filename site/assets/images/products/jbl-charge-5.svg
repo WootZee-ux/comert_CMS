@@ -1,16 +1,20 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="800" viewBox="0 0 1200 800" role="img" aria-label="JBL Charge 5">
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="800" viewBox="0 0 1200 800" role="img" aria-label="Boxă portabilă JBL Charge 5">
   <defs>
-    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
-      <stop offset="0%" stop-color="#0b1d3a"/>
-      <stop offset="100%" stop-color="#2563eb"/>
+    <linearGradient id="bg-jbl" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#0b1220"/>
+      <stop offset="100%" stop-color="#1d4ed8"/>
+    </linearGradient>
+    <linearGradient id="speaker-jbl" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#334155"/>
+      <stop offset="100%" stop-color="#0f172a"/>
     </linearGradient>
   </defs>
-  <rect width="1200" height="800" fill="url(#bg)"/>
-  <g fill="none" stroke="#93c5fd" stroke-width="16" opacity="0.35">
-    <circle cx="170" cy="140" r="90"/>
-    <circle cx="1030" cy="650" r="120"/>
-    <rect x="460" y="130" width="280" height="160" rx="24"/>
-  </g>
-  <text x="600" y="430" fill="#e2e8f0" font-family="Arial, Helvetica, sans-serif" font-size="64" font-weight="700" text-anchor="middle">JBL Charge 5</text>
-  <text x="600" y="500" fill="#bfdbfe" font-family="Arial, Helvetica, sans-serif" font-size="34" text-anchor="middle">Imagine reprezentativă produs</text>
+  <rect width="1200" height="800" fill="url(#bg-jbl)"/>
+  <ellipse cx="600" cy="690" rx="400" ry="70" fill="#020617" opacity="0.35"/>
+  <rect x="240" y="310" width="720" height="250" rx="125" fill="url(#speaker-jbl)" stroke="#64748b" stroke-width="8"/>
+  <circle cx="360" cy="435" r="86" fill="#111827" stroke="#94a3b8" stroke-width="8"/>
+  <circle cx="360" cy="435" r="36" fill="#334155"/>
+  <circle cx="840" cy="435" r="86" fill="#111827" stroke="#94a3b8" stroke-width="8"/>
+  <circle cx="840" cy="435" r="36" fill="#334155"/>
+  <rect x="540" y="395" width="120" height="80" rx="18" fill="#f97316"/>
 </svg>
