@@ -2,6 +2,7 @@
   const CART_KEY = 'audiohub-cart';
   const ACCOUNT_KEY = 'audiohub-account';
   const ORDERS_KEY = 'audiohub-orders';
+  const FAVORITES_KEY = 'audiohub-favorites';
 
   const parsePrice = (value) => Number(value) || 0;
 
@@ -54,6 +55,15 @@
     localStorage.setItem(ORDERS_KEY, JSON.stringify(orders));
   };
 
+  const readFavorites = () => {
+    const favorites = safeRead(FAVORITES_KEY, []);
+    return Array.isArray(favorites) ? favorites : [];
+  };
+
+  const saveFavorites = (favorites) => {
+    localStorage.setItem(FAVORITES_KEY, JSON.stringify(favorites));
+  };
+
   const formatPrice = (value) => `${value.toLocaleString('ro-RO')} lei`;
 
   const cartCountNode = document.querySelector('.js-cart-count');
@@ -97,6 +107,80 @@
     if (clearButton) {
       clearButton.disabled = cart.length === 0;
     }
+  };
+
+
+  const updateFavoriteButtons = () => {
+    const favorites = readFavorites();
+    const favoriteSet = new Set(favorites.map((item) => `${item.name}::${item.type}`));
+
+    document.querySelectorAll('.js-toggle-favorite').forEach((button) => {
+      const key = `${button.dataset.name}::${button.dataset.type}`;
+      const isActive = favoriteSet.has(key);
+      button.dataset.active = String(isActive);
+      button.textContent = isActive ? '♥ În favorite' : '♡ Favorite';
+    });
+  };
+
+  const toggleFavorite = (button) => {
+    const name = button.dataset.name;
+    const type = button.dataset.type;
+    const price = parsePrice(button.dataset.price);
+
+    if (!name || !type || !price) return;
+
+    const favorites = readFavorites();
+    const index = favorites.findIndex((item) => item.name === name && item.type === type);
+
+    if (index >= 0) {
+      favorites.splice(index, 1);
+    } else {
+      favorites.unshift({
+        name,
+        type,
+        price,
+      });
+    }
+
+    saveFavorites(favorites);
+    updateFavoriteButtons();
+    renderFavorites();
+  };
+
+  const renderFavorites = () => {
+    const favoriteList = document.querySelector('.js-favorite-items');
+    if (!favoriteList) return;
+
+    const favorites = readFavorites();
+
+    if (favorites.length === 0) {
+      favoriteList.innerHTML = '<li class="cart-empty">Nu ai produse la favorite momentan. Mergi în <a href="produse.html">Produse</a> și adaugă ce îți place.</li>';
+      return;
+    }
+
+    favoriteList.innerHTML = favorites
+      .map(
+        (item) =>
+          `<li class="favorite-item"><div><p class="order-id">${item.name}</p><p class="order-meta">${item.type}</p><p class="order-products">${formatPrice(item.price)}</p></div><div class="favorite-actions"><button class="btn js-favorite-add-cart" data-name="${item.name}" data-type="${item.type}" data-price="${item.price}">Adaugă în coș</button><button class="btn js-favorite-remove" data-name="${item.name}" data-type="${item.type}">Șterge</button></div></li>`,
+      )
+      .join('');
+
+    favoriteList.querySelectorAll('.js-favorite-add-cart').forEach((button) => {
+      button.addEventListener('click', () => {
+        addToCart(button);
+      });
+    });
+
+    favoriteList.querySelectorAll('.js-favorite-remove').forEach((button) => {
+      button.addEventListener('click', () => {
+        const favoritesList = readFavorites().filter(
+          (item) => !(item.name === button.dataset.name && item.type === button.dataset.type),
+        );
+        saveFavorites(favoritesList);
+        updateFavoriteButtons();
+        renderFavorites();
+      });
+    });
   };
 
   const addToCart = (button) => {
@@ -311,6 +395,10 @@
     button.addEventListener('click', () => addToCart(button));
   });
 
+  document.querySelectorAll('.js-toggle-favorite').forEach((button) => {
+    button.addEventListener('click', () => toggleFavorite(button));
+  });
+
   if (checkoutButton) {
     checkoutButton.addEventListener('click', () => {
       const cart = readCart();
@@ -338,5 +426,7 @@
 
   applyFilters();
   renderCart();
+  renderFavorites();
   setupAccountPage();
+  updateFavoriteButtons();
 })();
