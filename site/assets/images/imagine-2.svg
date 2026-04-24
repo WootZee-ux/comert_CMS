@@ -15,5 +15,4 @@
     <circle cx='220' cy='230' r='160' fill='rgba(255,255,255,0.45)'/>
     <rect x='360' y='120' width='280' height='260' rx='30' fill='rgba(0,0,0,0.2)'/>
   </g>
-  <text x='40' y='460' font-size='42' fill='white' font-family='Arial'>Imagine prelucrată 2</text>
 </svg>
