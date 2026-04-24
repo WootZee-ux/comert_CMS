@@ -1,16 +1,29 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="800" viewBox="0 0 1200 800" role="img" aria-label="Bose SoundLink Flex">
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="800" viewBox="0 0 1200 800" role="img" aria-label="Boxă portabilă Bose SoundLink Flex">
   <defs>
-    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
-      <stop offset="0%" stop-color="#0b1d3a"/>
-      <stop offset="100%" stop-color="#2563eb"/>
+    <linearGradient id="bg-flex" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#0f172a"/>
+      <stop offset="100%" stop-color="#0284c7"/>
+    </linearGradient>
+    <linearGradient id="body-flex" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#334155"/>
+      <stop offset="100%" stop-color="#111827"/>
     </linearGradient>
   </defs>
-  <rect width="1200" height="800" fill="url(#bg)"/>
-  <g fill="none" stroke="#93c5fd" stroke-width="16" opacity="0.35">
-    <circle cx="170" cy="140" r="90"/>
-    <circle cx="1030" cy="650" r="120"/>
-    <rect x="460" y="130" width="280" height="160" rx="24"/>
+  <rect width="1200" height="800" fill="url(#bg-flex)"/>
+  <ellipse cx="600" cy="680" rx="320" ry="60" fill="#020617" opacity="0.35"/>
+  <g transform="translate(320,220) rotate(-8 280 180)">
+    <rect x="40" y="80" width="560" height="220" rx="36" fill="url(#body-flex)" stroke="#cbd5e1" stroke-width="8"/>
+    <rect x="85" y="130" width="470" height="120" rx="20" fill="#0b1120"/>
+    <g fill="#475569">
+      <circle cx="140" cy="190" r="12"/>
+      <circle cx="190" cy="190" r="12"/>
+      <circle cx="240" cy="190" r="12"/>
+      <circle cx="290" cy="190" r="12"/>
+      <circle cx="340" cy="190" r="12"/>
+      <circle cx="390" cy="190" r="12"/>
+      <circle cx="440" cy="190" r="12"/>
+      <circle cx="490" cy="190" r="12"/>
+    </g>
+    <path d="M590 135 L640 115 L640 215 L590 235 Z" fill="#1e293b" stroke="#94a3b8" stroke-width="6"/>
   </g>
-  <text x="600" y="430" fill="#e2e8f0" font-family="Arial, Helvetica, sans-serif" font-size="64" font-weight="700" text-anchor="middle">Bose SoundLink Flex</text>
-  <text x="600" y="500" fill="#bfdbfe" font-family="Arial, Helvetica, sans-serif" font-size="34" text-anchor="middle">Imagine reprezentativă produs</text>
 </svg>
