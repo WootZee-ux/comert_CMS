@@ -443,6 +443,10 @@ footer {
   grid-template-columns: repeat(auto-fit, minmax(210px, 1fr));
 }
 
+.category-grid .tile p {
+  min-height: calc(1.5em * 3);
+}
+
 .tile {
   border: 1px solid var(--line);
   border-radius: 14px;
